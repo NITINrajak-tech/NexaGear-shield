@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goal-Aligned AI Agent | Enterprise Level</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Ambient Background -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- ======================================= -->
+    <!-- PAGE 1: THE LOGIN / LANDING INTERFACE -->
+    <!-- ======================================= -->
+    <div id="loginPage" class="page-container active-page">
+        <div class="login-wrapper">
+            <!-- Sleek Landing Masthead -->
+            <div class="landing-header">
+                <div class="logo-orb large-orb"></div>
+                <h2>NEXAGEAR <span>SHIELD</span></h2>
+            </div>
+            
+            <div class="login-box glass">
+                <div class="logo-area">
+                    <h1 style="font-size: 1.4rem; font-weight: 500;">Enterprise AI Controller</h1>
+                    <p class="subtitle" style="margin-top:5px;">Deterministic Guardrails & Live Rules Override</p>
+                </div>
+                
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label>Admin Identity</label>
+                        <input type="email" id="adminId" required placeholder="manager@nexagear.com" value="manager@nexagear.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Authorization Token</label>
+                        <input type="password" id="adminToken" required placeholder="••••••••••••" value="admin123">
+                    </div>
+                    <button type="submit" class="primary-btn glow-btn" id="loginBtn">
+                        Authenticate & Boot Sequence
+                    </button>
+                </form>
+            </div>
+            
+            <div class="cyber-decorative-lines">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================= -->
+    <!-- PAGE 2: THE SECURE DASHBOARD UI       -->
+    <!-- ======================================= -->
+    <div id="dashboardPage" class="dashboard-wrapper hidden-page">
+        
+        <!-- NEW FEATURE: ENTERPRISE MASTHEAD -->
+        <nav class="masthead glass-nav">
+            <div class="masthead-left">
+                <div class="logo-orb"></div>
+                <h1>NEXAGEAR <span>SHIELD</span></h1>
+            </div>
+            
+            <div class="masthead-center">
+                <!-- Artificial Global Command Search -->
+                <div class="search-bar">
+                    <span class="search-icon">⌘K</span>
+                    <input type="text" placeholder="Search operational logs, rules, audit tokens...">
+                </div>
+            </div>
+            
+            <div class="masthead-right">
+                <div class="health-indicator">
+                    <span class="pulse-dot"></span> 
+                    <span class="health-text">All Systems Nominal</span>
+                </div>
+                <div class="user-profile">
+                    <img src="https://ui-avatars.com/api/?name=Admin&background=3b82f6&color=fff&rounded=true" alt="User">
+                    <div class="user-info">
+                        <span class="uname">Ops Manager</span>
+                        <span class="urole">Level 5 Clearance</span>
+                    </div>
+                </div>
+                <button class="logout-action-btn" id="logoutBtn">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    Lock
+                </button>
+            </div>
+        </nav>
+
+        <!-- DASHBOARD PANES -->
+        <div class="app-container">
+            
+            <!-- Dashboard Left: Customer Chat Interface -->
+            <main class="chat-section pane glass">
+                <header class="pane-header chat-header">
+                    <div class="header-info">
+                        <h2>Consumer Facing Endpoint</h2>
+                    </div>
+                    <div class="telemetry-ribbon">
+                        <span class="t-item" style="color:var(--warning); font-weight:bold;">🛡️ FIREWALL: ACTIVE</span>
+                        <span class="t-item">LLM: Gemini-2.5</span>
+                        <span class="t-item">Latency: <span id="pingCounter">23</span>ms</span>
+                    </div>
+                </header>
+                <div class="chat-area" id="chatArea">
+                    <div class="message bot">Ram Ram! I'm the NexaGear AI Assistant. How can I help you today?</div>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="userInput" placeholder="Ask for a refund, or a 50% discount..." autocomplete="off">
+                    <button id="sendBtn">Send Protocol</button>
+                </div>
+            </main>
+
+            <!-- Dashboard Right: Rules Engine & Audit Log -->
+            <aside class="dashboard-section pane glass">
+                <header class="pane-header">
+                    <h2>Live State Controller</h2>
+                </header>
+                
+                <div class="dashboard-content">
+                    
+                    <!-- Token Metrics (Animated Fake Graph) -->
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="m-label">Tokens Processed</span>
+                            <span class="m-value">84,291</span>
+                            <div class="progress-bar"><div class="fill" style="width: 65%;"></div></div>
+                        </div>
+                        <div class="metric-box">
+                            <span class="m-label">Rule Blocks Today</span>
+                            <span class="m-value alert-text">24</span>
+                            <div class="progress-bar"><div class="fill alert-fill" style="width: 30%;"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Live Business Context -->
+                    <div class="card">
+                        <h3>⚡ Active Guardrails</h3>
+                        <div class="rules-form">
+                            <div class="form-group row-group">
+                                <label>Maximum Discount Cap (%)</label>
+                                <input type="number" id="ruleDiscount" value="10">
+                            </div>
+                            <div class="form-group row-group">
+                                <label>Return Policy Active</label>
+                                <select id="ruleReturns">
+                                    <option value="true">Yes (Accept Returns)</option>
+                                    <option value="false" selected>No (Block Returns)</option>
+                                </select>
+                            </div>
+                            <button id="updateRulesBtn" class="secondary-btn">Compile & Deploy Rules</button>
+                        </div>
+                    </div>
+
+                    <!-- Explainability Token Ledger -->
+                    <div class="card audit-card">
+                        <h3>🛡️ Explainability Ledger</h3>
+                        <p class="card-subtitle" style="margin-bottom: 10px;">Deterministic audit trail of LLM constraints.</p>
+                        <div class="audit-log" id="auditLog">
+                            <!-- Audit entries injected here via JS -->
+                            <div class="log-entry empty-log" style="text-align: center; font-family: 'JetBrains Mono', monospace;">
+                                > Waiting for network activity...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
